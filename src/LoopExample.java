@@ -24,7 +24,7 @@ public class LoopExample {
         for(int x =0; x<len-1; x++){
             sumMin +=arrayList.get(x);
         }
- 
+
         //sum of all elements except first
         for (int i = 1; i < len; i++){
             sumMax +=arrayList.get(i);
