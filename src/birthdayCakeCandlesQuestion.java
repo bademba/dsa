@@ -6,14 +6,25 @@ import java.util.List;
 public class birthdayCakeCandlesQuestion {
     public static int birthdayCakeCandles(List<Integer> candles) {
         // Write your code here
+        //sort the collection
         Collections.sort(candles);
-        int i;int sum=0;
+        int i;
+        int counter=0;
         System.out.println("SORTED CANDLES:"+candles);
-        for (i=0;i<candles.size();i++){
-            sum =sum +i;
-            System.out.println("SUM"+sum);
+
+        //loop through the list
+        for (i=0;i<candles.size()-1;i++){
+
+            //identify duplicate elements
+             if(candles.get(i)==candles.get(i+1)){
+
+                 //create counter for duplicate elements
+                 counter=Collections.frequency(candles,candles.get(i));
+                  System.out.println("Duplicate element is "+candles.get(i) +" at position "+(i+1) +" count "+counter);
+             }
         }
-        return sum;
+
+         return counter;
 
     }
     public static void main(String[] args) {
